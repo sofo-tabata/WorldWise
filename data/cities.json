@@ -1,0 +1,52 @@
+{
+  "cities": [
+    {
+      "id": "d424",
+      "cityName": "Tbilisi",
+      "country": "Georgia",
+      "emoji": "🇬🇪",
+      "date": "2024-02-22T13:45:49.984Z",
+      "notes": "I live here",
+      "position": {
+        "lat": "41.69691293654357",
+        "lng": "44.80223435929021"
+      }
+    },
+    {
+      "id": "b764",
+      "cityName": "Ankara",
+      "country": "Turkiye",
+      "emoji": "🇹🇷",
+      "date": "2024-02-22T13:46:23.944Z",
+      "notes": "",
+      "position": {
+        "lat": "39.887199901059745",
+        "lng": "32.58561283064675"
+      }
+    },
+    {
+      "id": "73ad",
+      "cityName": "Madrid",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-02-22T13:46:28.232Z",
+      "notes": "",
+      "position": {
+        "lat": "40.4045818612549",
+        "lng": "-3.559580274816892"
+      }
+    },
+    {
+      "id": "f7f4",
+      "cityName": "Paris",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2024-02-22T13:46:34.881Z",
+      "notes": "",
+      "position": {
+        "lat": "48.83498275804661",
+        "lng": "2.3730664164677644"
+      }
+    }
+  ]
+}
