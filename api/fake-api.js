@@ -1,18 +1,15 @@
-// api/fake-api.js
-const { createServer } = require("http");
+// api/start-server.js
 const { exec } = require("child_process");
 
-// Start fake API server
-exec("npm run server", (error, stdout, stderr) => {
-  if (error) {
-    console.error(`Error starting fake API server: ${error}`);
-    return;
-  }
-  console.log(`Fake API server stdout: ${stdout}`);
-  console.error(`Fake API server stderr: ${stderr}`);
-});
-
-// Dummy response for the serverless function
-module.exports = (req, res) => {
-  res.status(200).json({ message: "Fake API server started" });
+module.exports = async (req, res) => {
+  exec("npm run server", (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error starting JSON Server: ${error}`);
+      res.status(500).send("Error starting JSON Server");
+      return;
+    }
+    console.log(`JSON Server started. STDOUT: ${stdout}`);
+    console.error(`STDERR: ${stderr}`);
+    res.status(200).send("JSON Server started successfully");
+  });
 };
