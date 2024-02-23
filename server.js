@@ -1,6 +1,6 @@
-const https = require("https");
-const fs = require("fs");
-const path = require("path");
+import https from "https";
+import fs from "fs";
+import path from "path";
 
 const PORT = process.env.PORT || 8000;
 
