@@ -2,11 +2,11 @@ import styles from "./CityList.module.css";
 import Spinner from "./Spinner.jsx";
 import CityItem from "./CityItem.jsx";
 import Message from "./Message.jsx";
-import { useCities } from "./contexts/CitiesContext.jsx";
+import { useCitiesQuery } from "../hooks/useCitiesQuery.js";
 
 function CityList() {
-  const { cities, isLoading } = useCities();
-  if (isLoading) return <Spinner />;
+  const { cities, isFetchingCities } = useCitiesQuery();
+  if (isFetchingCities) return <Spinner />;
 
   if (!cities.length)
     return <Message message="Add your city by clicking on a city on the map" />;

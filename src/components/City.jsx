@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useCities } from "./contexts/CitiesContext";
 import Spinner from "./Spinner";
 import BackButton from "./BackButton";
+import { useCity } from "../hooks/useCity";
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
@@ -15,18 +16,20 @@ const formatDate = (date) =>
 
 function City() {
   const { id } = useParams();
-  const { getCity, currentCity, isLoading } = useCities();
+  const { setCurrentCity } = useCities();
+  const { city, isLoading } = useCity(id);
 
   useEffect(
     function () {
-      getCity(id);
+      setCurrentCity(city);
     },
-    [id, getCity]
+    [city, setCurrentCity]
   );
 
-  const { cityName, date, notes } = currentCity;
-
   if (isLoading) return <Spinner />;
+
+  const { cityName, date, notes } = city;
+
   return (
     <div className={styles.city}>
       <div className={styles.row}>

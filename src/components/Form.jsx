@@ -13,6 +13,7 @@ import FlagEmoji from "./FlagEmoji";
 import { useUrlPosition } from "../hooks/useUrlPosition";
 import Message from "./Message";
 import Spinner from "./Spinner";
+import { useCreateCity } from "../hooks/useCreateCity";
 import { useCities } from "./contexts/CitiesContext";
 
 export function convertToEmoji(countryCode) {
@@ -26,7 +27,8 @@ export function convertToEmoji(countryCode) {
 const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
 
 function Form() {
-  const { createCity, isLoading } = useCities();
+  const { createCity, isCreating } = useCreateCity();
+  const { setCurrentCity } = useCities();
   const navigate = useNavigate();
   const [lat, lng] = useUrlPosition();
   const [cityName, setCityName] = useState("");
@@ -69,7 +71,7 @@ function Form() {
     [lat, lng]
   );
 
-  async function handleSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault();
     if (!cityName || !date) return;
 
@@ -81,12 +83,11 @@ function Form() {
       notes,
       position: { lat, lng },
     };
-
-    await createCity(newCity);
+    createCity(newCity);
     navigate("/app/cities");
   }
 
-  if (isLoadingGeocoding) return <Spinner />;
+  if (isLoadingGeocoding || isCreating) return <Spinner />;
 
   if (!lat && !lng)
     return <Message message="Start by clicking somewhere on the map" />;
@@ -95,7 +96,7 @@ function Form() {
 
   return (
     <form
-      className={`${styles.form} ${isLoading ? styles.loading : ""}`}
+      className={`${styles.form} ${isCreating ? styles.loading : ""}`}
       onSubmit={handleSubmit}
     >
       <div className={styles.row}>
