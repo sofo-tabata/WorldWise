@@ -4,7 +4,7 @@
 
 # About
 
-Keep track of your adventures with WorldWise!🧳
+Keep track of your adventures with WorldWise! ✨
 
 I'm thrilled to share a project I've been working on recently! 🚀
 
