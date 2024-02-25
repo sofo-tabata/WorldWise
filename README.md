@@ -4,11 +4,11 @@
 
 # About
 
-Keep track of your adventures with WorldWise!🌏
+Keep track of your adventures with WorldWise!🧳
 
 I'm thrilled to share a project I've been working on recently! 🚀
 
-📌 WorldWise: I've built a comprehensive web app using React, JavaScript, and CSS Modules that gives you a world map that tracks your footsteps into every city you can think of. it let's you never forget your wonderful experiences, and show your friends how you have wandered the world.
+🌎 WorldWise: I've built a comprehensive web app using React, JavaScript, and CSS Modules that gives you a world map that tracks your footsteps into every city you can think of. it let's you never forget your wonderful experiences, and show your friends how you have wandered the world.
 
 # Getting Started
 
