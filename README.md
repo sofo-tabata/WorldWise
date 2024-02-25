@@ -2,7 +2,7 @@
 
 [![worldwise](https://github.com/sofo-tabata/WorldWise/assets/135848019/984885f0-fb5d-4112-b6b0-edeb9b475af5)](https://world-wise-project-app.vercel.app/)
 
-##About
+# About
 
 Keep track of your adventures with WorldWise!🌏
 
@@ -18,7 +18,7 @@ React for dynamic UI TypeScript for a robust codebase Tailwind CSS for a sleek d
 
 Filter search for a seamless job hunting experience Light/Dark mode for a personalized touch Detailed job information for each listing Engaging animations with Framer Motion
 
-##Getting Started
+# Getting Started
 
 ![coding-freak](https://github.com/sofo-tabata/WorldWise/assets/135848019/9cfbbbfe-46b7-4969-9f1b-b4021b1cbfb4)
 
