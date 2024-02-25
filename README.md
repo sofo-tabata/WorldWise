@@ -16,9 +16,15 @@ I'm thrilled to share a project I've been working on recently! 🚀
 
 1. First of all you need to clone app repository from github:
    
- ```
- https://github.com/sofo-tabata/WorldWise
- ```
+```
+git clone https://github.com/sofo-tabata/WorldWise
+```
+
+2. Navigate to the Project Directory:
+
+```
+cd WorldWise
+```
 
 3. Next step requires install all the dependencies.
    
@@ -26,7 +32,7 @@ I'm thrilled to share a project I've been working on recently! 🚀
 npm install
 ```
 
-5. Running the project
+4. Running the project
    
 ```
 npm run dev
